@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@300;400;500&family=Concert+One&family=Lobster+Two&family=Noto+Sans:wght@200;300;400;500;600&family=Pacifico&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Asap', sans-serif;
+}
+
+
+:root {
+  --red: #f44336;
+  --pink: #e91e62;
+  --purple: #9c27b0;
+  --voilet: #673ab6;
+  --dark_blue: #3f50b5;
+  --light_blue: #2096f3;
+  --dim_light_blue: #00a8f4;
+  --blue_green: #00bcd4;
+  --green: #009688;
+  --light_green: #4caf4f;
+  --soft_green: #8ac049;
+  --yelowish_green: #cddc39;
+  --yellow: #ffeb3a;
+  --orange: #ffc007;
+  --red_pink: #ff2e55;
+  --navblack: #3f3f3f;
+}
+
+.Cal,
+.Navbar,
+.Button .btn,
+.Screen .Current,
+.Screen .Expression,
+
+.Screen .History .His,
+.Screen .History .cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Navbar {
+  width: 100%;
+  min-height: 60px;
+  /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+  /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
+  background-color: #3f3f3f;
+  color: #fff;
+}
+
+.Navbar img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  /* background-color: #00a8f4; */
+  background: #C9D6FF;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Cal {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  /* background-color: var(--yelowish_green); */
+}
+
+.CalcuUI {
+  width: 700px;
+  min-height: 600px;
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px #000;
+}
+
+.Screen {
+  width: 100%;
+  min-height: 250px;
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+/* background-image: linear-gradient(135deg, #90F7EC 10%, #32CCBC 100%); */
+}
+
+.Button {
+  width: 100%;
+  min-height: 300px;
+  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 4.3rem;
+  padding: 2px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.Button .btn {
+  height: 4rem;
+  background-color: #09203f40;
+  color: #fff;
+  margin: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.Button .btn:hover{
+  background-color: #09203f92;
+}
+
+.Button .btn h1 {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.Screen .History{
+  overflow: scroll;
+  width: 100%;
+  height: 100px;
+  /* background-color: #00a8f4; */
+  align-items: none;
+  flex-direction: column;
+  justify-content: none;
+  padding: 4px 0 0 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.Screen .History::-webkit-scrollbar{
+  display: none;
+}
+.Screen .Current{
+  width: 100%;
+  height: 100px;
+  /* background-color: #009688; */
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+
+.Screen .Current .dull h1{
+  color: #00000086;
+}
+.Screen .Current .Bright h1{
+  color: #000;
+}
+
+
+.Screen .Expression{
+  width: 100%;
+  height: 50px;
+  /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
+  background-color: #3f3f3fba;
+  justify-content: right;
+  padding: 0 10px;
+  box-sizing: border-box;
+   color: #fff;
+}
+
+.Screen .Expression h1{
+  font-size: 23px;
+  letter-spacing: 3px;
+}
+
+.Screen .History .His{
+  width: 100%;
+  min-height: 30px;
+  margin: 0 0 3px 0;
+  background-color: #09203f22;
+  justify-content: right;
+  padding: 0 10px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.Screen .History .His h1{
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+
+.Screen .History .cross{
+  position: absolute;
+  width: 30px;
+  aspect-ratio: 1;
+  /* background-color: #009688; */
+  left: 1px;
+  top:  5px;
+}
+.Screen .History .cross i{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.CalcuUI .Button .Emoji{
+  font-size: 39px;
+}
